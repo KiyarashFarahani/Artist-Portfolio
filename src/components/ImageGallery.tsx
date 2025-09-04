@@ -115,7 +115,7 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
                         onClick={() => openLightbox(image, storyboardSet, globalIndex)}
                       >
                         <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300">
-                          <div className="relative aspect-[3/4]">
+                          <div className="relative aspect-[16/9]">
                             <Image
                               src={image.src}
                               alt={image.alt}
@@ -184,7 +184,7 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
               </button>
 
               {/* Image */}
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                 <Image
                   src={selectedImage.src}
                   alt={selectedImage.alt}
