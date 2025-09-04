@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Artist Portfolio
+
+A stunning, modern web portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. This portfolio showcases artistic works with beautiful animations, responsive design, and optimized performance.
+
+## Features
+
+- 🎨 **Beautiful Design**: Modern, artistic layout with smooth animations
+- 📱 **Responsive**: Works perfectly on all devices
+- ⚡ **Fast Performance**: Optimized images and code splitting
+- 🎭 **Smooth Animations**: Framer Motion for delightful interactions
+- 🖼️ **Image Gallery**: Masonry layout with lightbox functionality
+- 📧 **Contact Form**: Functional contact form with validation
+- 🔍 **SEO Optimized**: Meta tags and structured data
+- ♿ **Accessible**: WCAG compliant design
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Inter & Playfair Display (Google Fonts)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd artist-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Navigation.tsx
+│   ├── Hero.tsx
+│   ├── ImageGallery.tsx
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+├── data/
+│   └── artworks.ts
+├── lib/
+└── types/
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Adding Your Artwork
 
-## Deploy on Vercel
+1. Update the `artworks` array in `src/data/artworks.ts`
+2. Add your images to the `public/images/` folder
+3. Update the image paths in the artworks data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Styling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Modify `src/app/globals.css` for global styles
+- Use Tailwind classes for component styling
+- Customize colors in `tailwind.config.js`
+
+### Content
+
+- Update the hero section in `src/components/Hero.tsx`
+- Modify the about section in `src/components/About.tsx`
+- Update contact information in `src/components/Contact.tsx`
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with one click
+
+### Other Platforms
+
+```bash
+npm run build
+npm start
+```
+
+## Performance Features
+
+- **Image Optimization**: Next.js Image component with WebP support
+- **Code Splitting**: Automatic route-based code splitting
+- **Lazy Loading**: Images and components load as needed
+- **Font Optimization**: Google Fonts with display swap
+- **Bundle Analysis**: Built-in bundle analyzer
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Support
+
+If you have any questions or need help, please open an issue on GitHub.
+
+---
+
+Made with ❤️ using Next.js and Tailwind CSS
