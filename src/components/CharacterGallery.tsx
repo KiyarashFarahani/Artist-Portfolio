@@ -222,7 +222,7 @@ const CharacterGallery = ({ characterSets }: CharacterGalleryProps) => {
   }, [selectedImages, characterSets]);
 
   return (
-    <section className="relative">
+    <section id="character-gallery" className="relative">
       {/* Gallery Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -232,7 +232,7 @@ const CharacterGallery = ({ characterSets }: CharacterGalleryProps) => {
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-siavash font-bold text-gray-900 mb-6">
-            طراحی کاراکتر
+            کاراکتر ها
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-slate-400 to-slate-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 font-editorial-pro max-w-3xl mx-auto">

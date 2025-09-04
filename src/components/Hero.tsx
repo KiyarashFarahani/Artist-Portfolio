@@ -212,7 +212,7 @@ const Hero = () => {
                 درباره من
               </motion.a>
               <motion.a
-                href="#gallery"
+                href="#character-gallery"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 h-14 bg-gradient-to-r from-slate-600 to-slate-700 text-white font-semibold rounded-full hover:shadow-lg hover:from-slate-500 hover:to-slate-600 transition-all duration-300 font-editorial-pro flex items-center justify-center"

@@ -20,7 +20,8 @@ const Navigation = () => {
   const navItems = [
     { name: 'تماس با من', href: '#contact' },
     { name: 'درباره‌ی من', href: '#about' },
-    { name: 'گالری', href: '#gallery' },
+    { name: 'استوری برد ها', href: '#storyboards' },
+    { name: 'کاراکتر ها', href: '#character-gallery' },
     { name: 'خانه', href: '#home' },
   ];
 

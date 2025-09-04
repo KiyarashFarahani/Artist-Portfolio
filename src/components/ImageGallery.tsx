@@ -57,7 +57,7 @@ const ImageGallery = ({ characterSets }: ImageGalleryProps) => {
   };
 
   return (
-    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="storyboards" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -67,10 +67,10 @@ const ImageGallery = ({ characterSets }: ImageGalleryProps) => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-siavash font-bold text-gray-900 mb-4">
-            گالری کاراکترها
+            استوری برد ها
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            مجموعه‌ای از طراحی‌های کاراکتر که داستان‌های منحصر به فرد را از طریق رنگ، فرم و احساس بیان می‌کنند.
+            مجموعه‌ای از استوری بردها که داستان‌ها را از طریق تصاویر متوالی و ترکیب‌بندی بصری روایت می‌کنند.
           </p>
         </motion.div>
 
