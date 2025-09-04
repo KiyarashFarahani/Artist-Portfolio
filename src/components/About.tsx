@@ -2,22 +2,23 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { customFont, editorialPro } from '@/lib/fonts';
 
 const About = () => {
   const skills = [
-    'Digital Art',
-    'Traditional Painting',
-    'Photography',
-    '3D Modeling',
-    'Graphic Design',
-    'Animation'
+    'هنر دیجیتال',
+    'نقاشی سنتی',
+    'عکاسی',
+    'مدل‌سازی سه‌بعدی',
+    'طراحی گرافیک',
+    'انیمیشن'
   ];
 
   const achievements = [
-    { number: '50+', label: 'Artworks Created' },
-    { number: '3', label: 'Years Experience' },
-    { number: '15+', label: 'Exhibitions' },
-    { number: '100%', label: 'Client Satisfaction' }
+    { number: '50+', label: 'اثر هنری خلق شده' },
+    { number: '3', label: 'سال تجربه' },
+    { number: '15+', label: 'نمایشگاه' },
+    { number: '100%', label: 'رضایت مشتری' }
   ];
 
   return (
@@ -32,10 +33,10 @@ const About = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face"
-                alt="Artist Portrait"
+                src="/images/profile/kiana.jpeg"
+                alt="کیانا - پرتره هنرمند"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -53,32 +54,30 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl sm:text-5xl font-playfair font-bold text-gray-900 mb-6">
-              About the Artist
+            <h2 className={`text-4xl sm:text-5xl ${customFont.className} font-bold text-gray-900 mb-6 text-right`}>
+              درباره هنرمند
             </h2>
             
-            <div className="space-y-6 text-gray-600 leading-relaxed">
+            <div className={`space-y-6 text-gray-600 leading-relaxed ${editorialPro.className} text-right`}>
               <p className="text-lg">
-                Welcome to my creative world! I'm a passionate artist who believes in the power of visual storytelling 
-                to connect, inspire, and transform perspectives.
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، 
+                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
               </p>
               
               <p>
-                With over 3 years of experience in digital and traditional art, I specialize in creating 
-                immersive visual experiences that blend contemporary techniques with timeless artistic principles. 
-                My work spans across multiple mediums, from digital illustrations to traditional paintings.
+                و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد، 
+                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می‌طلبد.
               </p>
               
               <p>
-                Each piece I create is a journey of exploration, where I combine technical skill with emotional 
-                depth to produce art that resonates with viewers on a personal level. I'm constantly pushing 
-                boundaries and experimenting with new techniques to evolve my artistic voice.
+                تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، 
+                در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد.
               </p>
             </div>
 
             {/* Skills */}
             <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Skills & Expertise</h3>
+              <h3 className={`text-xl font-semibold text-gray-900 mb-4 ${customFont.className} text-right`}>مهارت‌ها و تخصص</h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <motion.span
