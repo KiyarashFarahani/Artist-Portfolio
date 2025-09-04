@@ -5,7 +5,6 @@ import ImageGallery from '@/components/ImageGallery';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import { artworks } from '@/data/artworks';
 import { characterSets } from '@/data/characterSets';
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <CharacterGallery characterSets={characterSets} />
-      <ImageGallery artworks={artworks} />
+      <ImageGallery characterSets={characterSets} />
       <About />
       <Contact />
       <Footer />
