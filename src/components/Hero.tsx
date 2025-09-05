@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { useFloatingAnimation } from '@/hooks/useFloatingAnimation';
 import { useEffect } from 'react';
@@ -41,7 +40,7 @@ const Hero = () => {
       {/* Main content container - centered in viewport */}
       <div className="absolute top-0 left-0 right-0 h-screen flex items-center justify-center z-20 w-full">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center py-12 sm:py-16 lg:py-20">
           
           {/* Left side - Landing image */}
           <motion.div
@@ -201,7 +200,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.0 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end lg:items-end lg:flex-row-reverse"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end lg:items-end lg:flex-row-reverse mb-8 sm:mb-12 lg:mb-0"
             >
               <motion.a
                 href="#about"
@@ -225,22 +224,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-64 left-1/2 transform -translate-x-1/2 z-20"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center text-white/60"
-        >
-          <span className="text-sm mb-2 font-editorial-pro">اسکرول کنید</span>
-          <ChevronDown size={24} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 };
