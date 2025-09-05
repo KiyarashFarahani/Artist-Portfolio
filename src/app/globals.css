@@ -65,25 +65,22 @@ body {
 
 /* Add more custom font classes here as needed */
 
-/* Custom scrollbar */
+/* Hide scrollbar for modern, clean look */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+/* For Firefox */
+html {
+  scrollbar-width: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
+/* For IE and Edge */
+body {
+  -ms-overflow-style: none;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
-}
-
-/* Hide scrollbar utility classes */
+/* Hide scrollbar utility classes - consistent with global hidden scrollbar */
 .scrollbar-none {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
