@@ -69,7 +69,7 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
           <h2 className="text-4xl sm:text-5xl font-siavash font-bold text-gray-900 mb-4">
             استوری برد ها
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-editorial-pro">
             مجموعه‌ای از استوری بردها که داستان‌ها را از طریق تصاویر متوالی و ترکیب‌بندی بصری روایت می‌کنند.
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
                 <h3 className="text-3xl font-siavash font-bold text-gray-900 mb-4 text-center">
                   {storyboardSet.name}
                 </h3>
-                <p className="text-gray-600 text-center max-w-4xl mx-auto leading-relaxed">
+                <p className="text-gray-600 text-center max-w-4xl mx-auto leading-relaxed font-editorial-pro">
                   {storyboardSet.description}
                 </p>
               </div>
@@ -128,7 +128,7 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
                           
                           {/* Overlay content */}
                           <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <p className="text-white text-sm font-medium">
+                            <p className="text-white text-sm font-medium font-editorial-pro">
                               {storyboardSet.name}
                             </p>
                           </div>
@@ -202,7 +202,7 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
                 <p className="text-gray-300 mb-4">
                   {currentIndex + 1} از {allImages.length}
                 </p>
-                <p className="text-gray-400 max-w-2xl mx-auto">
+                <p className="text-gray-400 max-w-2xl mx-auto font-editorial-pro">
                   {selectedStoryboardSet.description}
                 </p>
               </div>
