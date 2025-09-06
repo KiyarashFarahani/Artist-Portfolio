@@ -14,12 +14,14 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
   useEffect(() => {
     const loadingSteps = [
-      { text: 'Initializing...', progress: 10 },
-      { text: 'Loading fonts...', progress: 25 },
-      { text: 'Preparing gallery...', progress: 40 },
-      { text: 'Loading images...', progress: 60 },
-      { text: 'Optimizing assets...', progress: 80 },
-      { text: 'Almost ready...', progress: 95 },
+      { text: 'Initializing...', progress: 5 },
+      { text: 'Loading fonts...', progress: 15 },
+      { text: 'Preparing character gallery...', progress: 25 },
+      { text: 'Loading character images...', progress: 45 },
+      { text: 'Preparing storyboards...', progress: 55 },
+      { text: 'Loading storyboard images...', progress: 75 },
+      { text: 'Optimizing assets...', progress: 85 },
+      { text: 'Finalizing...', progress: 95 },
       { text: 'Welcome!', progress: 100 }
     ];
 
@@ -36,7 +38,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
           onComplete();
         }, 1000);
       }
-    }, 300);
+    }, 400);
 
     return () => clearInterval(interval);
   }, [onComplete]);

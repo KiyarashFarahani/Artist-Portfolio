@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { characterSets } from '@/data/characterSets';
+import { storyboardSets } from '@/data/storyboards';
 
 interface UseSplashScreenReturn {
   isLoading: boolean;
@@ -11,25 +13,44 @@ export const useSplashScreen = (): UseSplashScreenReturn => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Preload critical images
+    // Preload all gallery images
     const preloadImages = async () => {
-      const imageUrls = [
+      // Critical images
+      const criticalImages = [
         '/images/profile/kiana.jpeg',
         '/images/landing.png',
-        // Add more critical images here
       ];
 
-      const imagePromises = imageUrls.map((url) => {
-        return new Promise((resolve, reject) => {
+      // All character gallery images
+      const characterImages = characterSets.flatMap(set => 
+        set.images.map(img => img.src)
+      );
+
+      // All storyboard images
+      const storyboardImages = storyboardSets.flatMap(set => 
+        set.images.map(img => img.src)
+      );
+
+      // Combine all images
+      const allImages = [...criticalImages, ...characterImages, ...storyboardImages];
+
+      console.log(`Preloading ${allImages.length} images...`);
+
+      const imagePromises = allImages.map((url) => {
+        return new Promise((resolve) => {
           const img = new Image();
           img.onload = resolve;
-          img.onerror = reject;
+          img.onerror = (error) => {
+            console.warn(`Failed to load image: ${url}`, error);
+            resolve(error); // Don't reject, just log the error
+          };
           img.src = url;
         });
       });
 
       try {
         await Promise.all(imagePromises);
+        console.log('All images preloaded successfully');
       } catch (error) {
         console.warn('Some images failed to preload:', error);
       }
@@ -51,8 +72,8 @@ export const useSplashScreen = (): UseSplashScreenReturn => {
       await Promise.all([
         preloadImages(),
         preloadFonts(),
-        // Add a minimum loading time for better UX
-        new Promise(resolve => setTimeout(resolve, 2000))
+        // Add a minimum loading time for better UX (increased for more images)
+        new Promise(resolve => setTimeout(resolve, 3000))
       ]);
     };
 
