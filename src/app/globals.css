@@ -107,6 +107,25 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Ensure smooth scrolling works on all devices */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+}
+
+/* Mobile-specific smooth scrolling improvements */
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Prevent bounce scrolling on iOS */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+  }
+}
+
 /* Smooth transitions for scroll-triggered animations */
 .scroll-trigger {
   opacity: 0;

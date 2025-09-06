@@ -17,6 +17,9 @@ export default function SmoothScrollProvider({ children }: SmoothScrollProviderP
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
     });
 
+    // Make Lenis globally accessible
+    (window as any).lenis = lenisRef.current;
+
     // Animation frame function
     function raf(time: number) {
       lenisRef.current?.raf(time);
@@ -28,6 +31,7 @@ export default function SmoothScrollProvider({ children }: SmoothScrollProviderP
     // Cleanup
     return () => {
       lenisRef.current?.destroy();
+      (window as any).lenis = null;
     };
   }, []);
 
