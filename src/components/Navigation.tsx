@@ -49,12 +49,12 @@ const Navigation = () => {
         console.log('Scrolling to position:', offsetPosition); // Debug log
         
         // Method 1: Try to access Lenis from global scope
-        const lenisInstance = (window as any).lenis;
+        const lenisInstance = (window as Window & { lenis?: { scrollTo: (position: number, options?: { duration?: number; easing?: (t: number) => number }) => void } }).lenis;
         if (lenisInstance) {
           console.log('Using global Lenis instance');
           lenisInstance.scrollTo(offsetPosition, { 
             duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
           });
         } else {
           // Method 2: Use native smooth scroll

@@ -18,7 +18,7 @@ export default function SmoothScrollProvider({ children }: SmoothScrollProviderP
     });
 
     // Make Lenis globally accessible
-    (window as any).lenis = lenisRef.current;
+    (window as Window & { lenis?: Lenis }).lenis = lenisRef.current;
 
     // Animation frame function
     function raf(time: number) {
@@ -31,7 +31,7 @@ export default function SmoothScrollProvider({ children }: SmoothScrollProviderP
     // Cleanup
     return () => {
       lenisRef.current?.destroy();
-      (window as any).lenis = null;
+      (window as Window & { lenis?: Lenis | null }).lenis = null;
     };
   }, []);
 
