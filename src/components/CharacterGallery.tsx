@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
@@ -130,7 +130,7 @@ const CharacterGallery = ({ characterSets }: CharacterGalleryProps) => {
     setIsTransitioning(initialIsTransitioning);
   }, [characterSets]);
 
-  const selectImage = (setId: string, index: number, direction: 'next' | 'prev' | 'auto' = 'auto') => {
+  const selectImage = useCallback((setId: string, index: number, direction: 'next' | 'prev' | 'auto' = 'auto') => {
     // Start transition
     setIsTransitioning(prev => ({ ...prev, [setId]: true }));
     
@@ -142,49 +142,51 @@ const CharacterGallery = ({ characterSets }: CharacterGalleryProps) => {
     setTimeout(() => {
       setIsTransitioning(prev => ({ ...prev, [setId]: false }));
     }, 350); // 300ms animation + 50ms buffer to ensure animation is fully complete
-  };
+  }, []);
 
-  const navigateToNext = (setId: string) => {
+  const navigateToNext = useCallback((setId: string) => {
     const currentIndex = selectedImages[setId] || 0;
     const characterSet = characterSets.find(set => set.id === setId);
     if (characterSet) {
       const nextIndex = (currentIndex + 1) % characterSet.images.length;
       selectImage(setId, nextIndex, 'next');
     }
-  };
+  }, [selectedImages, characterSets, selectImage]);
 
-  const navigateToPrev = (setId: string) => {
+  const navigateToPrev = useCallback((setId: string) => {
     const currentIndex = selectedImages[setId] || 0;
     const characterSet = characterSets.find(set => set.id === setId);
     if (characterSet) {
       const prevIndex = (currentIndex - 1 + characterSet.images.length) % characterSet.images.length;
       selectImage(setId, prevIndex, 'prev');
     }
-  };
+  }, [selectedImages, characterSets, selectImage]);
 
   // Auto-slide functionality for each character set
   useEffect(() => {
+    const currentIntervalRefs = intervalRefs.current;
+    
     characterSets.forEach(set => {
       if (autoSlideStates[set.id] && set.images.length > 1) {
-        intervalRefs.current[set.id] = setInterval(() => {
+        currentIntervalRefs[set.id] = setInterval(() => {
           const currentIndex = selectedImages[set.id] || 0;
           const nextIndex = (currentIndex + 1) % set.images.length;
           selectImage(set.id, nextIndex, 'auto');
         }, 3000);
       } else {
-        if (intervalRefs.current[set.id]) {
-          clearInterval(intervalRefs.current[set.id]);
-          intervalRefs.current[set.id] = null;
+        if (currentIntervalRefs[set.id]) {
+          clearInterval(currentIntervalRefs[set.id] as NodeJS.Timeout);
+          currentIntervalRefs[set.id] = null;
         }
       }
     });
 
     return () => {
-      Object.values(intervalRefs.current).forEach(interval => {
-        if (interval) clearInterval(interval);
+      Object.values(currentIntervalRefs).forEach(interval => {
+        if (interval) clearInterval(interval as NodeJS.Timeout);
       });
     };
-  }, [autoSlideStates, characterSets]);
+  }, [autoSlideStates, characterSets, selectedImages, selectImage]);
 
   const handleMouseEnter = (setId: string) => {
     setAutoSlideStates(prev => ({ ...prev, [setId]: false }));
@@ -203,7 +205,6 @@ const CharacterGallery = ({ characterSets }: CharacterGalleryProps) => {
         if (activeGallery) {
           const setId = activeGallery.getAttribute('data-set-id');
           if (setId && characterSets.find(set => set.id === setId)) {
-            const currentIndex = selectedImages[setId] || 0;
             const characterSet = characterSets.find(set => set.id === setId);
             if (characterSet) {
               if (event.key === 'ArrowLeft') {
@@ -219,7 +220,7 @@ const CharacterGallery = ({ characterSets }: CharacterGalleryProps) => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImages, characterSets]);
+  }, [selectedImages, characterSets, navigateToNext, navigateToPrev]);
 
   return (
     <section id="character-gallery" className="relative">

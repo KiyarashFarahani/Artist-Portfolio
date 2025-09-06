@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 const CustomFontExample = () => {
   return (
     <div className="p-8 space-y-6">

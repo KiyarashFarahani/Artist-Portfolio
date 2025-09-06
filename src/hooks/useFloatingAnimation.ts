@@ -11,8 +11,7 @@ export const useFloatingAnimation = (options: FloatingAnimationOptions = {}) => 
   const {
     duration = 4,
     intensity = 20,
-    delay = 0,
-    ease = 'easeInOut'
+    delay = 0
   } = options;
 
   const controls = useAnimation();
