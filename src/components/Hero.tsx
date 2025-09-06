@@ -22,8 +22,26 @@ const Hero = () => {
       {/* Background with gradient overlay - full height */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
       
-      {/* Fade out gradient at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent z-10"></div>
+      {/* Fade out gradient at bottom - on top of image */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent z-[10000]"></div>
+      
+      {/* Full width image on desktop - starts after navigation */}
+      <div className="hidden lg:block absolute top-20 left-0 right-0 bottom-0 z-[9999] overflow-hidden">
+        <motion.div 
+          className="relative w-full h-full"
+          animate={imageFloating.controls}
+        >
+          <Image
+            src="/images/landing.png"
+            alt="کیانا فراهانی - هنرمند"
+            width={1920}
+            height={1080}
+            className="object-cover object-top w-full h-full -translate-x-1/8"
+            sizes="100vw"
+            priority
+          />
+        </motion.div>
+      </div>
       
       {/* Large background text - Your name */}
       <motion.div
@@ -42,12 +60,12 @@ const Hero = () => {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center py-12 sm:py-16 lg:py-20">
           
-          {/* Left side - Landing image */}
+          {/* Left side - Landing image - only visible on mobile/tablet */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative lg:hidden"
           >
             <motion.div 
               className="relative aspect-[4/5] max-w-lg mx-auto"
@@ -164,12 +182,12 @@ const Hero = () => {
             />
           </motion.div>
 
-          {/* Right side - Text content */}
+          {/* Right side - Text content - positioned to right on desktop */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-center lg:text-right"
+            className="text-center lg:text-right lg:col-start-2 lg:col-span-1"
             dir="rtl"
           >
             <motion.div
