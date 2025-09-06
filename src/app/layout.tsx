@@ -27,12 +27,12 @@ const londrinaOutline = Londrina_Outline({
 });
 
 export const metadata: Metadata = {
-  title: "Artist Portfolio | Creative Gallery",
+  title: "کیانا فراهانی | Character Designer & Visual Artist",
   description: "A stunning portfolio showcasing artistic works with beautiful design and smooth animations",
-  keywords: "artist, portfolio, gallery, art, creative, design",
-  authors: [{ name: "Artist Name" }],
+  keywords: "artist, portfolio, gallery, art, creative, design, character designer, visual artist, kiana farahani",
+  authors: [{ name: "کیانا فراهانی" }],
   openGraph: {
-    title: "Artist Portfolio | Creative Gallery",
+    title: "کیانا فراهانی | Character Designer & Visual Artist",
     description: "A stunning portfolio showcasing artistic works",
     type: "website",
   },
