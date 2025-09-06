@@ -37,7 +37,7 @@ export function useSmoothScroll() {
     };
   }, []);
 
-  const scrollTo = (target: string | number | HTMLElement, options?: any) => {
+  const scrollTo = (target: string | number | HTMLElement, options?: ScrollToOptions) => {
     if (lenisRef.current) {
       lenisRef.current.scrollTo(target, options);
     }
