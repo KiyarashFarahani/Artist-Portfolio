@@ -13,42 +13,63 @@ export interface StoryboardSet {
 
 export const storyboardSets: StoryboardSet[] = [
   {
-    id: 'storyboard-set-1',
-    name: 'داستان اول',
-    description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد.',
+    id: 'gaz',
+    name: 'گز',
+    description: 'استوری برد گز',
     images: [
-      { id: 'storyboard-1', src: '/images/storyboards/photo_2025-09-02 10.00.27.jpeg', alt: 'استوری برد - تصویر 1' },
-      { id: 'storyboard-2', src: '/images/storyboards/photo_2025-09-02 10.00.29.jpeg', alt: 'استوری برد - تصویر 2' },
-      { id: 'storyboard-3', src: '/images/storyboards/photo_2025-09-02 10.00.30.jpeg', alt: 'استوری برد - تصویر 3' },
-      { id: 'storyboard-4', src: '/images/storyboards/photo_2025-09-02 10.00.31.jpeg', alt: 'استوری برد - تصویر 4' },
-      { id: 'storyboard-5', src: '/images/storyboards/photo_2025-09-02 10.00.32.jpeg', alt: 'استوری برد - تصویر 5' },
-      { id: 'storyboard-6', src: '/images/storyboards/photo_2025-09-02 10.00.33.jpeg', alt: 'استوری برد - تصویر 6' },
+      { id: 'gaz-1', src: '/images/Storyboards/Gaz/IMG_7105.PNG', alt: 'Gaz 1' },
+      { id: 'gaz-2', src: '/images/Storyboards/Gaz/IMG_7106.PNG', alt: 'Gaz 2' },
+      { id: 'gaz-3', src: '/images/Storyboards/Gaz/IMG_7113.PNG', alt: 'Gaz 3' },
+      { id: 'gaz-4', src: '/images/Storyboards/Gaz/IMG_7115.PNG', alt: 'Gaz 4' },
+      { id: 'gaz-5', src: '/images/Storyboards/Gaz/IMG_7118.PNG', alt: 'Gaz 5' },
     ]
   },
   {
-    id: 'storyboard-set-2',
-    name: 'داستان دوم',
-    description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد.',
+    id: 'liapho-storyboard',
+    name: 'قهوه لیافو',
+    description: 'استوری برد لیافو',
     images: [
-      { id: 'storyboard-7', src: '/images/storyboards/photo_2025-09-02 10.00.34.jpeg', alt: 'استوری برد - تصویر 7' },
-      { id: 'storyboard-8', src: '/images/storyboards/photo_2025-09-02 10.00.37.jpeg', alt: 'استوری برد - تصویر 8' },
-      { id: 'storyboard-9', src: '/images/storyboards/photo_2025-09-02 10.00.39.jpeg', alt: 'استوری برد - تصویر 9' },
-      { id: 'storyboard-10', src: '/images/storyboards/photo_2025-09-02 10.00.42.jpeg', alt: 'استوری برد - تصویر 10' },
-      { id: 'storyboard-11', src: '/images/storyboards/photo_2025-09-02 10.00.43.jpeg', alt: 'استوری برد - تصویر 11' },
-      { id: 'storyboard-12', src: '/images/storyboards/photo_2025-09-02 10.00.45.jpeg', alt: 'استوری برد - تصویر 12' },
+      { id: 'liapho-s-1', src: '/images/Storyboards/Liapho Storyboard/IMG_7084.PNG', alt: 'Liapho Storyboard 1' },
+      { id: 'liapho-s-2', src: '/images/Storyboards/Liapho Storyboard/IMG_7085.PNG', alt: 'Liapho Storyboard 2' },
+      { id: 'liapho-s-3', src: '/images/Storyboards/Liapho Storyboard/IMG_7086.PNG', alt: 'Liapho Storyboard 3' },
+      { id: 'liapho-s-4', src: '/images/Storyboards/Liapho Storyboard/IMG_7087.PNG', alt: 'Liapho Storyboard 4' },
+      { id: 'liapho-s-5', src: '/images/Storyboards/Liapho Storyboard/IMG_7088.PNG', alt: 'Liapho Storyboard 5' },
+      { id: 'liapho-s-6', src: '/images/Storyboards/Liapho Storyboard/IMG_7089.PNG', alt: 'Liapho Storyboard 6' },
     ]
   },
   {
-    id: 'storyboard-set-3',
-    name: 'داستان سوم',
-    description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد.',
+    id: 'rice-shop',
+    name: 'فروشگاه برنج',
+    description: 'استوری برد فروشگاه برنج',
     images: [
-      { id: 'storyboard-13', src: '/images/storyboards/photo_2025-09-02 10.00.46.jpeg', alt: 'استوری برد - تصویر 13' },
-      { id: 'storyboard-14', src: '/images/storyboards/photo_2025-09-02 10.00.47.jpeg', alt: 'استوری برد - تصویر 14' },
-      { id: 'storyboard-15', src: '/images/storyboards/photo_2025-09-02 10.00.59.jpeg', alt: 'استوری برد - تصویر 15' },
-      { id: 'storyboard-16', src: '/images/storyboards/photo_2025-09-02 10.01.00.jpeg', alt: 'استوری برد - تصویر 16' },
-      { id: 'storyboard-17', src: '/images/storyboards/photo_2025-09-02 10.01.01.jpeg', alt: 'استوری برد - تصویر 17' },
-      { id: 'storyboard-18', src: '/images/storyboards/photo_2025-09-02 10.01.02.jpeg', alt: 'استوری برد - تصویر 18' },
+      { id: 'rice-1', src: '/images/Storyboards/Rice Shop/IMG_7100.PNG', alt: 'Rice Shop 1' },
+      { id: 'rice-2', src: '/images/Storyboards/Rice Shop/IMG_7101.PNG', alt: 'Rice Shop 2' },
+      { id: 'rice-3', src: '/images/Storyboards/Rice Shop/IMG_7102.PNG', alt: 'Rice Shop 3' },
+      { id: 'rice-4', src: '/images/Storyboards/Rice Shop/IMG_7127.PNG', alt: 'Rice Shop 4' },
     ]
-  }
+  },
+  {
+    id: 'setarvan',
+    name: 'سترون',
+    description: 'استوری برد سترون',
+    images: [
+      { id: 'setarvan-1', src: '/images/Storyboards/Setarvan/setarvan-1.PNG', alt: 'Setarvan 1' },
+      { id: 'setarvan-2', src: '/images/Storyboards/Setarvan/setarvan-2.PNG', alt: 'Setarvan 2' },
+      { id: 'setarvan-3', src: '/images/Storyboards/Setarvan/setarvan-3.PNG', alt: 'Setarvan 3' },
+      { id: 'setarvan-4', src: '/images/Storyboards/Setarvan/setarvan-4.PNG', alt: 'Setarvan 4' },
+      { id: 'setarvan-5', src: '/images/Storyboards/Setarvan/setarvan-5.PNG', alt: 'Setarvan 5' },
+      { id: 'setarvan-6', src: '/images/Storyboards/Setarvan/setarvan-6.PNG', alt: 'Setarvan 6' },
+    ]
+  },
+  {
+    id: 'soghout',
+    name: 'سقوط',
+    description: 'استوری برد سقوط',
+    images: [
+      { id: 'soghout-1', src: '/images/Storyboards/soghout/IMG_7038.PNG', alt: 'Soghout 1' },
+      { id: 'soghout-2', src: '/images/Storyboards/soghout/IMG_7039.PNG', alt: 'Soghout 2' },
+      { id: 'soghout-3', src: '/images/Storyboards/soghout/soghout-1.PNG', alt: 'Soghout 3' },
+      { id: 'soghout-4', src: '/images/Storyboards/soghout/soghout-2.PNG', alt: 'Soghout 4' },
+    ]
+  },
 ];

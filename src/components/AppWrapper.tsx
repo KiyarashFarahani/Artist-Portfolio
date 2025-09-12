@@ -4,13 +4,13 @@ import { useSplashScreen } from '@/hooks/useSplashScreen';
 import SplashScreen from './SplashScreen';
 import Navigation from './Navigation';
 import Hero from './Hero';
-import CharacterGallery from './CharacterGallery';
 import ImageGallery from './ImageGallery';
+import Galleries from './Galleries';
 import About from './About';
 import Contact from './Contact';
 import Footer from './Footer';
-import { characterSets } from '@/data/characterSets';
 import { storyboardSets } from '@/data/storyboards';
+import { gallerySets } from '@/data/galleries';
 
 export default function AppWrapper() {
   const { isLoading, completeLoading } = useSplashScreen();
@@ -21,7 +21,9 @@ export default function AppWrapper() {
       <main className={`min-h-screen transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Navigation />
         <Hero />
-        <CharacterGallery characterSets={characterSets} />
+        {/* CharacterGallery kept for future use */}
+        {/* <CharacterGallery characterSets={characterSets} /> */}
+        <Galleries gallerySets={gallerySets} />
         <ImageGallery storyboardSets={storyboardSets} />
         <About />
         <Contact />

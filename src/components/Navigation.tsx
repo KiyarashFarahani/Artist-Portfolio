@@ -95,7 +95,7 @@ const Navigation = () => {
     { name: 'تماس با من', href: '#contact' },
     { name: 'درباره‌ی من', href: '#about' },
     { name: 'استوری برد ها', href: '#storyboards' },
-    { name: 'کاراکتر ها', href: '#character-gallery' },
+    { name: 'گالری ها', href: '#galleries' },
     { name: 'خانه', href: '#home' },
   ];
 
