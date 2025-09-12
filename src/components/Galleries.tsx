@@ -153,7 +153,7 @@ const Galleries = ({ gallerySets }: GalleriesProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[10010] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
             onClick={closeLightbox}
           >
             <motion.div
@@ -172,22 +172,22 @@ const Galleries = ({ gallerySets }: GalleriesProps) => {
                 <X size={32} />
               </button>
 
-              {/* Navigation buttons */}
+              {/* Navigation buttons - side (desktop) */}
               <button
                 onClick={prevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
+                className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={nextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
+                className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
               >
                 <ChevronRight size={20} />
               </button>
 
               {/* Image */}
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
+              <div className="relative h-[65vh] sm:h-[70vh] md:h-[75vh] rounded-2xl overflow-hidden">
                 <Image
                   src={selectedImage.src}
                   alt={selectedImage.alt}
@@ -202,7 +202,7 @@ const Galleries = ({ gallerySets }: GalleriesProps) => {
                 <h3 className="text-2xl font-siavash font-bold mb-2">
                   {selectedSet.name}
                 </h3>
-                <p className="text-gray-300 mb-4">
+                <p dir="rtl" className="text-gray-300 mb-4 font-editorial-pro text-center">
                   {currentIndex + 1} از {allImages.length}
                 </p>
                 {selectedSet.description && (
@@ -210,6 +210,24 @@ const Galleries = ({ gallerySets }: GalleriesProps) => {
                     {selectedSet.description}
                   </p>
                 )}
+              </div>
+
+              {/* Bottom controls (mobile) */}
+              <div className="mt-4 flex md:hidden items-center justify-center gap-4">
+                <button
+                  onClick={prevImage}
+                  aria-label="Previous"
+                  className="w-12 h-12 rounded-full bg-white/10 text-white border border-white/20 backdrop-blur-sm active:scale-95 transition flex items-center justify-center"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={nextImage}
+                  aria-label="Next"
+                  className="w-12 h-12 rounded-full bg-white/10 text-white border border-white/20 backdrop-blur-sm active:scale-95 transition flex items-center justify-center"
+                >
+                  <ChevronRight size={20} />
+                </button>
               </div>
             </motion.div>
           </motion.div>
