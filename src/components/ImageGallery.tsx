@@ -169,20 +169,6 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
                 <X size={32} />
               </button>
 
-              {/* Navigation buttons - side (desktop) */}
-              <button
-                onClick={prevImage}
-                className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <button
-                onClick={nextImage}
-                className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
-              >
-                <ChevronRight size={20} />
-              </button>
-
               {/* Image */}
               <div className="relative h-[65vh] sm:h-[70vh] md:h-[75vh] rounded-2xl overflow-hidden">
                 <Image
@@ -192,6 +178,19 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
                   className="object-contain"
                   sizes="90vw"
                 />
+                {/* Navigation buttons - side (desktop) inside image container */}
+                <button
+                  onClick={prevImage}
+                  className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full items-center justify-center text-white hover:bg-black/40 hover:scale-110 transition-all duration-300 z-10 border border-white/20"
+                >
+                  <ChevronRight size={20} />
+                </button>
               </div>
 
               {/* Image info */}
