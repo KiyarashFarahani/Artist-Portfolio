@@ -6,20 +6,15 @@ import { customFont, editorialPro } from '@/lib/fonts';
 
 const About = () => {
   const skills = [
-    'هنر دیجیتال',
-    'نقاشی سنتی',
-    'عکاسی',
-    'مدل‌سازی سه‌بعدی',
-    'طراحی گرافیک',
-    'انیمیشن'
+    'استوری برد',
+    'استوری ریل',
+    'تصویر سازی',
+    'بکگراند',
+    'انیمیت کات‌اوت',
+    'طراحی کانسپت',
+    'طراحی کاراکتر'
   ];
 
-  const achievements = [
-    { number: '50+', label: 'اثر هنری خلق شده' },
-    { number: '3', label: 'سال تجربه' },
-    { number: '15+', label: 'نمایشگاه' },
-    { number: '100%', label: 'رضایت مشتری' }
-  ];
 
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -60,18 +55,23 @@ const About = () => {
             
             <div className={`space-y-6 text-gray-600 leading-relaxed ${editorialPro.className} text-right`}>
               <p className="text-lg">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، 
-                چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+              کیانا فراهانی؛ متولد ۱۳۸۲.
+دانشجوی کارشناسی رشته هنر دیجیتال (گرایش انیمیشن)
+
               </p>
               
               <p>
-                و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد، 
-                کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می‌طلبد.
+              سابقه فعالیت در طراحی استوری برد، استوری ریل، تصویرسازی، بکگراند، انیمیت موشن‌گرافیک، طراحی کانسپت، طراحی کارکتر.
+آشنا با برنامه‌های فوتوشاپ، افتر افکتز، ایلوستریتور، تون‌بوم هارمونی، استوری‌برد پرو، پروکرییت و...
+
               </p>
               
-              <p>
-                تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، 
-                در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد.
+              <p dir="rtl">
+              • بکگراند ارتیست گنبد کبود از ۱۴۰۳ - تا کنون
+              <br></br>
+• تصویرساز استودیو پارتیکل از ۱۴۰۲ - ۱۴۰۳
+              <br></br>
+• سابقه کارگردانی یک‌ اثر کوتاه برای موسسه‌ی محک.  
               </p>
             </div>
 
@@ -104,23 +104,6 @@ const About = () => {
           viewport={{ once: true }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={achievement.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                {achievement.number}
-              </div>
-              <div className="text-gray-600 font-medium">
-                {achievement.label}
-              </div>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </section>

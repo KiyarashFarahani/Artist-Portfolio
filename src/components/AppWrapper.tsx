@@ -23,8 +23,8 @@ export default function AppWrapper() {
         <Hero />
         {/* CharacterGallery kept for future use */}
         {/* <CharacterGallery characterSets={characterSets} /> */}
-        <Galleries gallerySets={gallerySets} />
         <ImageGallery storyboardSets={storyboardSets} />
+        <Galleries gallerySets={gallerySets} />
         <About />
         <Contact />
         <Footer />

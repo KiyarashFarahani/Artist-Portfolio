@@ -23,15 +23,15 @@ const Contact = () => {
       icon: Mail,
       title: 'ایمیل',
       titleEn: 'Email',
-      value: 'kiana.farahani@example.com',
-      href: 'mailto:kiana.farahani@example.com'
+      value: 'shirawizard@gmail.com',
+      href: 'mailto:shirawizard@gmail.com'
     },
     {
       icon: Phone,
       title: 'تلفن',
       titleEn: 'Phone',
-      value: '+98 912 345 6789',
-      href: 'tel:+989123456789'
+      value: '09105105357',
+      href: 'tel:+989105105357'
     },
     {
       icon: MapPin,
@@ -46,21 +46,21 @@ const Contact = () => {
   const socialLinks = [
     { 
       icon: TelegramIcon, 
-      href: 'https://t.me/kianafarahani', 
+      href: 'https://t.me/kiano_f', 
       label: 'تلگرام',
       labelEn: 'Telegram',
       color: 'bg-blue-500 hover:bg-blue-600'
     },
     { 
       icon: Instagram, 
-      href: 'https://instagram.com/kianafarahani', 
+      href: 'https://instagram.com/ki.ana.f', 
       label: 'اینستاگرام',
       labelEn: 'Instagram',
       color: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600'
     },
     { 
-      icon: Linkedin, 
-      href: 'https://linkedin.com/in/kianafarahani', 
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/kiana-farahani-a6212036a/',
       label: 'لینکدین',
       labelEn: 'LinkedIn',
       color: 'bg-blue-600 hover:bg-blue-700'

@@ -25,6 +25,19 @@ export const storyboardSets: StoryboardSet[] = [
     ]
   },
   {
+    id: 'setarvan',
+    name: 'سترون',
+    description: '',
+    images: [
+      { id: 'setarvan-1', src: '/images/Storyboards/Setarvan/setarvan-1.PNG', alt: 'Setarvan 1' },
+      { id: 'setarvan-2', src: '/images/Storyboards/Setarvan/setarvan-2.PNG', alt: 'Setarvan 2' },
+      { id: 'setarvan-3', src: '/images/Storyboards/Setarvan/setarvan-3.PNG', alt: 'Setarvan 3' },
+      { id: 'setarvan-4', src: '/images/Storyboards/Setarvan/setarvan-4.PNG', alt: 'Setarvan 4' },
+      { id: 'setarvan-5', src: '/images/Storyboards/Setarvan/setarvan-5.PNG', alt: 'Setarvan 5' },
+      { id: 'setarvan-6', src: '/images/Storyboards/Setarvan/setarvan-6.PNG', alt: 'Setarvan 6' },
+    ]
+  },
+  {
     id: 'liapho-storyboard',
     name: 'قهوه لیافو',
     description: '',
@@ -48,19 +61,7 @@ export const storyboardSets: StoryboardSet[] = [
       { id: 'rice-4', src: '/images/Storyboards/Rice Shop/IMG_7127.PNG', alt: 'Rice Shop 4' },
     ]
   },
-  {
-    id: 'setarvan',
-    name: 'سترون',
-    description: '',
-    images: [
-      { id: 'setarvan-1', src: '/images/Storyboards/Setarvan/setarvan-1.PNG', alt: 'Setarvan 1' },
-      { id: 'setarvan-2', src: '/images/Storyboards/Setarvan/setarvan-2.PNG', alt: 'Setarvan 2' },
-      { id: 'setarvan-3', src: '/images/Storyboards/Setarvan/setarvan-3.PNG', alt: 'Setarvan 3' },
-      { id: 'setarvan-4', src: '/images/Storyboards/Setarvan/setarvan-4.PNG', alt: 'Setarvan 4' },
-      { id: 'setarvan-5', src: '/images/Storyboards/Setarvan/setarvan-5.PNG', alt: 'Setarvan 5' },
-      { id: 'setarvan-6', src: '/images/Storyboards/Setarvan/setarvan-6.PNG', alt: 'Setarvan 6' },
-    ]
-  },
+  
   {
     id: 'soghout',
     name: 'سقوط',
