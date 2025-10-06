@@ -15,7 +15,7 @@ export const storyboardSets: StoryboardSet[] = [
   {
     id: 'gaz',
     name: 'گز',
-    description: 'استوری برد گز',
+    description: '',
     images: [
       { id: 'gaz-1', src: '/images/Storyboards/Gaz/IMG_7105.PNG', alt: 'Gaz 1' },
       { id: 'gaz-2', src: '/images/Storyboards/Gaz/IMG_7106.PNG', alt: 'Gaz 2' },
@@ -27,7 +27,7 @@ export const storyboardSets: StoryboardSet[] = [
   {
     id: 'liapho-storyboard',
     name: 'قهوه لیافو',
-    description: 'استوری برد لیافو',
+    description: '',
     images: [
       { id: 'liapho-s-1', src: '/images/Storyboards/Liapho Storyboard/IMG_7084.PNG', alt: 'Liapho Storyboard 1' },
       { id: 'liapho-s-2', src: '/images/Storyboards/Liapho Storyboard/IMG_7085.PNG', alt: 'Liapho Storyboard 2' },
@@ -40,7 +40,7 @@ export const storyboardSets: StoryboardSet[] = [
   {
     id: 'rice-shop',
     name: 'فروشگاه برنج',
-    description: 'استوری برد فروشگاه برنج',
+    description: '',
     images: [
       { id: 'rice-1', src: '/images/Storyboards/Rice Shop/IMG_7100.PNG', alt: 'Rice Shop 1' },
       { id: 'rice-2', src: '/images/Storyboards/Rice Shop/IMG_7101.PNG', alt: 'Rice Shop 2' },
@@ -51,7 +51,7 @@ export const storyboardSets: StoryboardSet[] = [
   {
     id: 'setarvan',
     name: 'سترون',
-    description: 'استوری برد سترون',
+    description: '',
     images: [
       { id: 'setarvan-1', src: '/images/Storyboards/Setarvan/setarvan-1.PNG', alt: 'Setarvan 1' },
       { id: 'setarvan-2', src: '/images/Storyboards/Setarvan/setarvan-2.PNG', alt: 'Setarvan 2' },
@@ -64,7 +64,7 @@ export const storyboardSets: StoryboardSet[] = [
   {
     id: 'soghout',
     name: 'سقوط',
-    description: 'استوری برد سقوط',
+    description: '',
     images: [
       { id: 'soghout-1', src: '/images/Storyboards/soghout/IMG_7038.PNG', alt: 'Soghout 1' },
       { id: 'soghout-2', src: '/images/Storyboards/soghout/IMG_7039.PNG', alt: 'Soghout 2' },

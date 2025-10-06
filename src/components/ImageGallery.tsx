@@ -69,9 +69,7 @@ const ImageGallery = ({ storyboardSets }: ImageGalleryProps) => {
           <h2 className="text-4xl sm:text-5xl font-siavash font-bold text-gray-900 mb-4">
             استوری برد ها
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-editorial-pro">
-            مجموعه‌ای از استوری بردها که داستان‌ها را از طریق تصاویر متوالی و ترکیب‌بندی بصری روایت می‌کنند.
-          </p>
+          
         </motion.div>
 
         {/* Storyboard Sets Grid */}

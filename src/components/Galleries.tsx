@@ -70,9 +70,7 @@ const Galleries = ({ gallerySets }: GalleriesProps) => {
           <h2 className="text-4xl sm:text-5xl font-siavash font-bold text-gray-900 mb-4">
             گالری ها
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-editorial-pro">
-            مجموعه‌ای از گالری‌ها بر اساس پوشه‌های تصاویر.
-          </p>
+        
         </motion.div>
 
         {/* Galleries Grid (by folder) */}
