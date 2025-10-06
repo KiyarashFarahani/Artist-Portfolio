@@ -17,8 +17,8 @@ export const gallerySets: GallerySet[] = [
     id: 'tak-frame',
     name: 'آثار تک فریم',
     images: [
-      { id: 'tak-1', src: '/images/Normal Galleries/Tak-Frame/IMG_6950.PNG', alt: 'Tak Frame 1' },
-      { id: 'tak-2', src: '/images/Normal Galleries/Tak-Frame/IMG_6952.PNG', alt: 'Tak Frame 2' },
+      { id: 'tak-1', src: '/images/Normal Galleries/Tak-Frame/photo_2025-10-06 22.58.46.jpeg', alt: 'Tak Frame 1' },
+      { id: 'tak-2', src: '/images/Normal Galleries/Tak-Frame/IMG_7126.PNG', alt: 'Tak Frame 2' },
       { id: 'tak-3', src: '/images/Normal Galleries/Tak-Frame/IMG_7041.PNG', alt: 'Tak Frame 3' },
       { id: 'tak-4', src: '/images/Normal Galleries/Tak-Frame/IMG_7052.PNG', alt: 'Tak Frame 4' },
       { id: 'tak-5', src: '/images/Normal Galleries/Tak-Frame/IMG_7055.PNG', alt: 'Tak Frame 5' },
@@ -27,8 +27,12 @@ export const gallerySets: GallerySet[] = [
       { id: 'tak-8', src: '/images/Normal Galleries/Tak-Frame/IMG_7070.PNG', alt: 'Tak Frame 8' },
       { id: 'tak-9', src: '/images/Normal Galleries/Tak-Frame/IMG_7079.PNG', alt: 'Tak Frame 9' },
       { id: 'tak-10', src: '/images/Normal Galleries/Tak-Frame/IMG_7083.PNG', alt: 'Tak Frame 10' },
-      { id: 'tak-11', src: '/images/Normal Galleries/Tak-Frame/IMG_7126.PNG', alt: 'Tak Frame 11' },
-      { id: 'tak-12', src: '/images/Normal Galleries/Tak-Frame/IMG_7133.PNG', alt: 'Tak Frame 12' },
+      { id: 'tak-11', src: '/images/Normal Galleries/Tak-Frame/IMG_7133.PNG', alt: 'Tak Frame 11' },
+      { id: 'tak-12', src: '/images/Normal Galleries/Tak-Frame/IMG_6950.PNG', alt: 'Tak Frame 12' },
+      { id: 'tak-13', src: '/images/Normal Galleries/Tak-Frame/IMG_6952.PNG', alt: 'Tak Frame 13' },
+      { id: 'tak-14', src: '/images/Normal Galleries/Tak-Frame/photo_2025-10-06 22.58.47.jpeg', alt: 'Tak Frame 14' },
+      { id: 'tak-15', src: '/images/Normal Galleries/Tak-Frame/photo_2025-10-06 22.58.48.jpeg', alt: 'Tak Frame 15' },
+      
     ],
   },
   {
