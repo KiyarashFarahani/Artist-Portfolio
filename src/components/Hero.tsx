@@ -210,7 +210,7 @@ const Hero = () => {
 استوری آرتیست و کانسپت دیزاینر
               <br />
               <span className="text-lg text-gray-400">
-                Illustrator & Storyboard Artist
+                Story Artist & Concept Designer
               </span>
             </motion.p>
 
