@@ -95,7 +95,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-slate-300 font-editorial-pro mb-12"
           >
-            Character Designer & Visual Artist
+            Story Artist & Concept Designer
           </motion.p>
 
           {/* Loading Progress */}
