@@ -207,7 +207,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mr-0 leading-relaxed font-editorial-pro"
             >
-              تصویرساز و استوری‌برد آرتیست
+استوری آرتیست و کانسپت دیزاینر
               <br />
               <span className="text-lg text-gray-400">
                 Illustrator & Storyboard Artist

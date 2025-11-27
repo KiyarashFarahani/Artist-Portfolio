@@ -50,13 +50,13 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className={`text-4xl sm:text-5xl ${customFont.className} font-bold text-gray-900 mb-6 text-right`}>
-              درباره هنرمند
+              درباره من
             </h2>
             
             <div className={`space-y-6 text-gray-600 leading-relaxed ${editorialPro.className} text-right`}>
               <p className="text-lg">
               کیانا فراهانی؛ متولد ۱۳۸۲.
-دانشجوی کارشناسی رشته هنر دیجیتال (گرایش انیمیشن)
+ کارشناسی رشته هنر دیجیتال (گرایش انیمیشن)
 
               </p>
               
@@ -72,6 +72,8 @@ const About = () => {
 • تصویرساز استودیو پارتیکل از ۱۴۰۲ - ۱۴۰۳
               <br></br>
 • سابقه کارگردانی یک‌ اثر کوتاه برای موسسه‌ی محک.  
+              <br></br>
+• سابقه کارگردانی هشت قسمت اپیزودیک برای سایت دیوار
               </p>
             </div>
 
