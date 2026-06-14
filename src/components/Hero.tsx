@@ -65,7 +65,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative lg:hidden"
+            className="relative lg:hidden overflow-hidden"
           >
             <motion.div 
               className="relative aspect-[4/5] max-w-lg mx-auto"
@@ -220,22 +220,56 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 1.0 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end lg:items-end lg:flex-row-reverse mb-8 sm:mb-12 lg:mb-0"
             >
-              <motion.a
-                href="#about"
+              <motion.button
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector('#about');
+                  if (element) {
+                    const navHeight = 64;
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - navHeight;
+                    const lenisInstance = (window as Window & { lenis?: { scrollTo: (position: number, options?: { duration?: number; easing?: (t: number) => number }) => void } }).lenis;
+                    if (lenisInstance) {
+                      lenisInstance.scrollTo(offsetPosition, {
+                        duration: 1.2,
+                        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                      });
+                    } else {
+                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                  }
+                }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 h-14 border-2 border-slate-400/50 text-slate-200 font-semibold rounded-full hover:border-slate-300/70 hover:bg-slate-500/20 transition-all duration-300 font-editorial-pro flex items-center justify-center"
               >
                 درباره من
-              </motion.a>
-              <motion.a
-                href="#galleries"
+              </motion.button>
+              <motion.button
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector('#galleries');
+                  if (element) {
+                    const navHeight = 64;
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - navHeight;
+                    const lenisInstance = (window as Window & { lenis?: { scrollTo: (position: number, options?: { duration?: number; easing?: (t: number) => number }) => void } }).lenis;
+                    if (lenisInstance) {
+                      lenisInstance.scrollTo(offsetPosition, {
+                        duration: 1.2,
+                        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                      });
+                    } else {
+                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                  }
+                }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 h-14 bg-gradient-to-r from-slate-600 to-slate-700 text-white font-semibold rounded-full hover:shadow-lg hover:from-slate-500 hover:to-slate-600 transition-all duration-300 font-editorial-pro flex items-center justify-center"
               >
                 مشاهده گالری
-              </motion.a>
+              </motion.button>
             </motion.div>
           </motion.div>
           </div>

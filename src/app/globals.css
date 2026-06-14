@@ -73,6 +73,7 @@ body {
 /* For Firefox */
 html {
   scrollbar-width: none;
+  overflow-x: hidden;
 }
 
 /* For IE and Edge */
@@ -107,24 +108,8 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Ensure smooth scrolling works on all devices */
-html {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
-}
-
-/* Mobile-specific smooth scrolling improvements */
-@media (max-width: 768px) {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Prevent bounce scrolling on iOS */
-  body {
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: none;
-  }
-}
+/* Smooth scrolling is handled by Lenis - do not add scroll-behavior or
+   -webkit-overflow-scrolling here as they conflict with Lenis on mobile */
 
 /* Smooth transitions for scroll-triggered animations */
 .scroll-trigger {
@@ -155,10 +140,10 @@ html {
 }
 
 
-/* Prevent horizontal overflow */
-html, body {
+/* Prevent horizontal overflow - only on body to avoid blocking Lenis scroll on mobile */
+body {
   overflow-x: hidden;
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 /* Ensure all containers respect viewport width */
