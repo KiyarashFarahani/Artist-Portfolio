@@ -23,8 +23,8 @@ const Contact = () => {
       icon: Mail,
       title: 'ایمیل',
       titleEn: 'Email',
-      value: 'shirawizard@gmail.com',
-      href: 'mailto:shirawizard@gmail.com'
+      value: 'kiana.n.farahani@gmail.com',
+      href: 'mailto:kiana.n.farahani@gmail.com'
     },
     {
       icon: Phone,
