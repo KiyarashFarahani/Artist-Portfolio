@@ -23,10 +23,10 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
       
       {/* Fade out gradient at bottom - on top of image */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent z-[10000]"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent z-[10000] pointer-events-none"></div>
       
       {/* Full width image on desktop - starts after navigation */}
-      <div className="hidden lg:block absolute top-20 left-0 right-0 bottom-0 z-[9999] overflow-hidden">
+      <div className="hidden lg:block absolute top-20 left-0 right-0 bottom-0 z-[9999] overflow-hidden pointer-events-none">
         <motion.div 
           className="relative w-full h-full"
           animate={imageFloating.controls}
