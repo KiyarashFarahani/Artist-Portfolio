@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Instagram, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Phone as _Phone, MapPin, Instagram, Linkedin, ExternalLink } from 'lucide-react';
 
 // Custom Telegram Icon Component
 const TelegramIcon = ({ size = 20, className = "" }) => (
@@ -26,13 +26,14 @@ const Contact = () => {
       value: 'kiana.n.farahani@gmail.com',
       href: 'mailto:kiana.n.farahani@gmail.com'
     },
-    {
-      icon: Phone,
-      title: 'تلفن',
-      titleEn: 'Phone',
-      value: '09105105357',
-      href: 'tel:+989105105357'
-    },
+    // Temporarily removed phone contact
+    // {
+    //   icon: Phone,
+    //   title: 'تلفن',
+    //   titleEn: 'Phone',
+    //   value: '09105105357',
+    //   href: 'tel:+989105105357'
+    // },
     {
       icon: MapPin,
       title: 'موقعیت',
